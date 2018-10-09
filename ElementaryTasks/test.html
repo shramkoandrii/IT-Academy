@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mocha Tests</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+  <!-- MOCA TEST -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.js"></script>
+  <!-- CHAI TEST -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.js"></script>
+</head>
+<body>
+  <div id="mocha"></div>
+  <!-- TASKS -->
+  <script src="src/task1.js"></script>
+  <script src="src/task2.js"></script>
+  <script src="src/task3.js"></script>
+  <script src="src/task4.js"></script>
+  <script src="src/task5.js"></script>
+  <script src="src/task6.js"></script>
+  <script src="src/task7.js"></script>
+  <!-- TESTS -->
+  <script>
+    mocha.setup('bdd');
+  </script>
+  <script>
+    let assert = chai.assert;
+  </script>
+  <script src="test/test1.js"></script>
+  <script src="test/test2.js"></script>
+  <script src="test/test3.js"></script>
+  <script src="test/test4.js"></script>
+  <script src="test/test5.js"></script>
+  <script src="test/test6.js"></script>
+  <script src="test/test7.js"></script>
+  <script>
+    mocha.run();
+  </script>
+</body>
+</html>

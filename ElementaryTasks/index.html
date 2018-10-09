@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Elementary Tasks</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5 mb-5">JS Elementary Tasks</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#task1" role="tab" aria-selected="true">Task1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#task2" role="tab" aria-selected="false">Task2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#task3" role="tab" aria-selected="false">Task3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#task4" role="tab" aria-selected="false">Task4</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#task5" role="tab" aria-selected="false">Task5</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#task6" role="tab" aria-selected="false">Task6</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#task7" role="tab" aria-selected="false">Task7</a>
+      </li>
+    </ul>
+    <div class="tab-content mt-3" id="myTabContent">
+      <div class="tab-pane fade show active" id="task1" role="tabpanel">
+        <h2>1. Шахматная доска</h2>
+        <p>
+          Вывести шахматную доску с заданными размерами высоты и ширины, по принципу:<br>
+          <pre>
+😂 😂 😂 😂 😂 😂 
+  😂 😂 😂 😂 😂 😂
+😂 😂 😂 😂 😂 😂 
+  😂 😂 😂 😂 😂 😂
+          </pre>
+          Входные параметры: длина, ширина, символ для отображения.<br>
+          Выход: строка с представлением шахматной доски.<br>            
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="chess-board-length" placeholder="Длинна">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="chess-board-height" placeholder="Ширина">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <input type="text" class="form-control" id="chess-board-symbol" placeholder="Символ">
+          </div>
+          <button id="chess-board" class="btn btn-primary mb-2">Создать доску</button>
+        </div>
+        <pre id="chess-board-answer"></pre>
+      </div>
+      <div class="tab-pane fade" id="task2" role="tabpanel">
+        <h2>2. Анализ конвертов</h2>
+        <p>
+          Есть два конверта со сторонами (a,b) и (c,d). Требуется определить, можно ли один конверт вложить в другой.<br>
+          Программа должна обрабатывать ввод чисел с плавающей точкой.<br>
+          Входные параметры: объекты конверт1 и конверт2.<br>
+          Выход: номер конверта, если вложение возможно, 0 – если вложение невозможно.<br>
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-2 mb-2">
+            <label for="side-a">Конверт 1</label>
+            <input type="number" class="form-control mb-3" id="side-a" placeholder="a">
+            <input type="number" class="form-control mb-3" id="side-b" placeholder="b">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <label for="side-c">Конверт 2</label>
+            <input type="number" class="form-control mb-3" id="side-c" placeholder="c">
+            <input type="number" class="form-control mb-3" id="side-d" placeholder="d">
+          </div>
+        </div>
+        <button id="envelope" class="btn btn-primary mb-2">Анализ</button>
+        <p id="envelope-answer"></p>
+      </div>
+      <div class="tab-pane fade" id="task3" role="tabpanel">
+        <h2>3. Сортировка треугольников</h2>
+        <p>
+          Вывести треугольники в порядке убывания их площади.<br>
+          Входные параметры: массив объектов треугольник.<br>
+          Выход: упорядоченный массив имён треугольников.<br>
+          Примечание:<br>
+          <ul>
+            <li>Расчёт площади треугольника должен производится по формуле Герона.</li>
+            <li>Каждый треугольник определяется именами вершин и длинами его сторон.</li>
+            <li>Приложение должно обрабатывать ввод чисел с плавающей точкой:</li>
+          </ul>       
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-6 mb-2">
+            <label class="mr-3">Добавить треугольник</label>
+            <input type="button" class="btn btn-primary" id="triangles-new" value="+">
+          </div>
+        </div>
+        <div id="triangles-list">
+          <div class="row">
+            <div class="form-group col-sm-2 mb-2">
+              <input type="text" class="form-control mt-2 mb-2 triangles-name" placeholder="Введите название" value="abc">
+            </div>
+            <div class="form-group col-sm-1 mb-2">
+              <input type="number" class="form-control mt-2 mb-2 triangles-a" placeholder="a" value="13">
+            </div>
+            <div class="form-group col-sm-1 mb-2">
+              <input type="number" class="form-control mt-2 mb-2 triangles-b" placeholder="b" value="2">
+            </div>
+            <div class="form-group col-sm-1 mb-2">
+              <input type="number" class="form-control mt-2 mb-2 triangles-c" placeholder="c" value="14">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-2 mb-2">
+              <input type="text" class="form-control mt-2 mb-2 triangles-name" placeholder="Введите название" value="bca">
+            </div>
+            <div class="form-group col-sm-1 mb-2">
+              <input type="number" class="form-control mt-2 mb-2 triangles-a" placeholder="a" value="5">
+            </div>
+            <div class="form-group col-sm-1 mb-2">
+              <input type="number" class="form-control mt-2 mb-2 triangles-b" placeholder="b" value="2">
+            </div>
+            <div class="form-group col-sm-1 mb-2">
+              <input type="number" class="form-control mt-2 mb-2 triangles-c" placeholder="c" value="5">
+            </div>
+          </div>
+        </div>
+        <button id="triangles" class="btn btn-primary mb-2">Вывести</button>
+        <p id="triangles-answer"></p>
+      </div>
+      <div class="tab-pane fade" id="task4" role="tabpanel">
+        <h2>4. Палиндром</h2>
+        <p>
+          Проверить является ли число или его часть палиндромом.<br>
+          Например, число 1234437 не является палиндромом, но является палиндромом его часть 3443.<br>
+          Числа меньшие, чем 10 палиндромом не считать.<br>
+          Входные параметры: число.<br>
+          Выход: извлечённый из числа палиндром либо 0, если извлечение не удалось.<br>        
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="palindrome-input" placeholder="Число">
+          </div>
+          <button id="palindrome" class="btn btn-primary mb-2">Проверить</button>
+        </div>
+        <span id="palindrome-answer"></span>
+      </div>
+      <div class="tab-pane fade" id="task5" role="tabpanel">
+        <h2>5. Счастливые билеты</h2>
+        <p>
+          Есть 2 способа подсчёта счастливых билетов:<br>
+          1. Простой — если на билете напечатано шестизначное число, и сумма первых трёх цифр равна сумме последних трёх, то этот билет считается счастливым.<br>
+          2. Сложный — если сумма чётных цифр билета равна сумме нечётных цифр билета, то билет считается счастливым.<br>
+          Определить программно какой вариант подсчёта счастливых билетов даст их большее количество на заданном интервале.<br>
+          Входные параметры: объект context с полями min и max.<br>
+          Выход: объект с информацией о победившем методе и количестве счастливых билетов для каждого способа подсчёта.<br>
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="lucky-number-min" maxlength = "6" placeholder="Минимум">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="lucky-number-max" maxlength="6" placeholder="Максимум">
+          </div>
+          <button id="lucky-ticket" class="btn btn-primary mb-2">Вывести</button>
+        </div>
+        <span id="lucky-number-answer"></span>
+      </div>
+      <div class="tab-pane fade" id="task6" role="tabpanel">
+        <h2>6. Числовая последовательность</h2>
+        <p>
+          Вывести через запятую ряд длиной n, состоящий из натуральных чисел, квадрат которых не меньше заданного m.<br>
+          Входные параметры: длина и значение минимального квадрата.<br>
+          Выход: строка с рядом чисел.<br>
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="order-input-length" placeholder="Длинна">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="order-input-square" placeholder="Квадрат">
+          </div>
+          <button id="order" class="btn btn-primary mb-2">Вывести</button>
+        </div>
+        <span id="order-answer"></span>
+      </div>
+      <div class="tab-pane fade" id="task7" role="tabpanel">
+        <h2>7. Ряд Фибоначчи для диапазона</h2>
+        <p>
+          Вывести все числа Фибоначчи, которые удовлетворяют переданному в функцию ограничению: находятся в указанном диапазоне, либо имеют указанную длину.<br>
+          Входные параметры: объект context с полями min и max, либо с полем length.<br>
+          Выход: массив чисел.<br>
+        </p>
+        <div class="row">
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="fibonacci-length" placeholder="Длинна">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="fibonacci-min" placeholder="Минимум">
+          </div>
+          <div class="form-group col-sm-2 mb-2">
+            <input type="number" class="form-control" id="fibonacci-max" placeholder="Максимуим">
+          </div>
+          <button id="fibonacci" class="btn btn-primary mb-2">Вывести</button>
+        </div>
+        <p id="fibonacci-answer"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="src/task1.js"></script>
+  <script src="src/task2.js"></script>
+  <script src="src/task3.js"></script>
+  <script src="src/task4.js"></script>
+  <script src="src/task5.js"></script>
+  <script src="src/task6.js"></script>
+  <script src="src/task7.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

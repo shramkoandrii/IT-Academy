@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Clock and Date</title>
+</head>
+<body>
+	<div class="container">
+		<clock-calendar state='clock' calendarFormat='MM/DD/YY' clockFormat='HH:MM'></clock-calendar>
+		<template id='clockCalendarTemplate'> 
+			<style>
+				#clock-calendar {
+					font-size: 150px;
+					color: #fff;
+				}
+			</style>
+			<div id="clock-calendar"></div>
+		</template>
+	</div>
+	<script src="js/data.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
