@@ -42,7 +42,7 @@ export class PetService {
     getFluffyOrWhite(): Observable<Pet[]> {
         return this.http.get(`${this.dataServer}pets`)
             .pipe(map((response: Response) => response.json()))
-            .pipe(map(pets => pets.filter(pet => pet.color  === 'white' || (pet.hasOwnProperty('fluffy') && pet.fluffy !== 0))))
+            .pipe(map(pets => pets.filter(pet => pet.color  === 'white' || (pet.hasOwnProperty('fluffy') && pet.fluffy !== 0 && pet.fluffy !== null))))
     }
 
     getAvaragePrice (pets: Pet[]) {

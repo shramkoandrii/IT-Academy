@@ -10,6 +10,7 @@
             formControlName='type'
             (change)='selectPet($event)'
             (change)='validators($event)'
+            [value]='selectedPet'
         >
             <option *ngFor="let pet of pets" [value]='pet'>{{pet}}</option>
         </select>
