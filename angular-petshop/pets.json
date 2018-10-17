@@ -1,0 +1,116 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "type": "Cat",
+      "color": "red",
+      "name": "Lolly",
+      "price": 750,
+      "fluffy": 2
+    },
+    {
+      "id": 2,
+      "type": "Dog",
+      "color": "brown",
+      "name": "Buba",
+      "price": 150
+    },
+    {
+      "id": 3,
+      "type": "Dog",
+      "color": "red",
+      "name": "Set",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "type": "Hamster",
+      "color": "orange",
+      "price": 270,
+      "fluffy": 4
+    },
+    {
+      "id": 5,
+      "type": "Cat",
+      "color": "red",
+      "name": "Max",
+      "price": 250,
+      "fluffy": 0
+    },
+    {
+      "id": 6,
+      "type": "Cat",
+      "color": "black",
+      "name": "Oscar",
+      "price": 150,
+      "fluffy": 3
+    },
+    {
+      "id": 7,
+      "type": "Dog",
+      "color": "grey",
+      "name": "Bella",
+      "price": 1000
+    },
+    {
+      "id": 8,
+      "type": "Dog",
+      "color": "red",
+      "name": "Luna",
+      "price": 550
+    },
+    {
+      "id": 9,
+      "type": "Cat",
+      "color": "red",
+      "name": "Coco",
+      "price": 140,
+      "fluffy": 0
+    },
+    {
+      "id": 10,
+      "type": "Hamster",
+      "color": "yellow",
+      "price": 180,
+      "fluffy": 3
+    },
+    {
+      "id": 11,
+      "type": "Cat",
+      "color": "black",
+      "name": "Cleo",
+      "price": 910,
+      "fluffy": 2
+    },
+    {
+      "id": 12,
+      "type": "Dog",
+      "color": "white",
+      "name": "Molly",
+      "price": 350
+    },
+    {
+      "id": 13,
+      "type": "Dog",
+      "color": "yellow",
+      "name": "Maggie",
+      "price": 180
+    },
+    {
+      "id": 14,
+      "type": "Cat",
+      "color": "white",
+      "name": "Sam",
+      "price": 200,
+      "fluffy": 5
+    },
+    {
+      "type": "Cat",
+      "color": "yellow",
+      "price": 100,
+      "name": "Kojima",
+      "fluffy": 1,
+      "id": 15
+    }
+  ]
+}

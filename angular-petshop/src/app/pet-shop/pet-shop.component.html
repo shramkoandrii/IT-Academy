@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3">
+            <app-pet-form (formEvent)="recieveData($event)"></app-pet-form> 
+        </div>
+        <div class="col-md-9">
+            <app-pet-list 
+                [allPetsdata]="allPetsdata" 
+                [catsData]="catsData" 
+                [fluffyOrWhiteData]="fluffyOrWhiteData" 
+                [getGreaterThanAverageData]="getGreaterThanAverageData"
+            ></app-pet-list>
+        </div>
+    </div>
+</div>

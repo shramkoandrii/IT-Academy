@@ -1,0 +1,140 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All Pets</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">All Cats</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Fluffy or White</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="expensive-tab" data-toggle="tab" href="#expensive" role="tab" aria-controls="expensive" aria-selected="false">Expensive</a>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Fluffy</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of allPetsdata">
+                    <th><img src="../../../assets/images/{{item.type}}.svg" alt="Pet" title="{{item.type}}"></th>
+                    <td>
+                        <span *ngIf="item.name">{{item.name}}</span>
+                        <span *ngIf="!item.name"><i class="fas fa-times" style="font-size: 20px; padding: 10px 12px"></i></span>
+                    </td>
+                    <td>{{item.color}}</td>
+                    <td>{{item.price}} $</td>
+                    <td>
+                        <span *ngIf="item.fluffy">{{item.fluffy}}</span>
+                        <span *ngIf="!item.fluffy"><i class="fas fa-times" style="font-size: 20px; padding: 10px 0"></i></span>
+                    </td>
+                    <td><button class="btn btn-danger" (click)="onDelete(item)">Delete</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Fluffy</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of catsData">
+                    <th><img src="../../../assets/images/{{item.type}}.svg" alt="Pet" title="{{item.type}}"></th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.color}}</td>
+                    <td>{{item.price}} $</td>
+                    <td>
+                        <span *ngIf="item.fluffy">{{item.fluffy}}</span>
+                        <span *ngIf="!item.fluffy"><i class="fas fa-times" style="font-size: 20px; padding: 10px 0"></i></span>
+                    </td>
+                    <td><button class="btn btn-danger" (click)="onDelete(item)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Fluffy</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of fluffyOrWhiteData">
+                    <th><img src="../../../assets/images/{{item.type}}.svg" alt="Pet" title="{{item.type}}"></th>
+                    <td>
+                        <span *ngIf="item.name">{{item.name}}</span>
+                        <span *ngIf="!item.name"><i class="fas fa-times" style="font-size: 20px; padding: 10px 12px"></i></span>
+                    </td>
+                    <td>{{item.color}}</td>
+                    <td>{{item.price}} $</td>
+                    <td>
+                        <span *ngIf="item.fluffy">{{item.fluffy}}</span>
+                        <span *ngIf="!item.fluffy"><i class="fas fa-times" style="font-size: 20px; padding: 10px 0"></i></span>
+                    </td>
+                    <td><button class="btn btn-danger" (click)="onDelete(item)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane fade" id="expensive" role="tabpanel" aria-labelledby="expensive-tab">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Fluffy</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of getGreaterThanAverageData">
+                    <th><img src="../../../assets/images/{{item.type}}.svg" alt="Pet" title="{{item.type}}"></th>
+                    <td>
+                        <span *ngIf="item.name">{{item.name}}</span>
+                        <span *ngIf="!item.name"><i class="fas fa-times" style="font-size: 20px; padding: 10px 12px"></i></span>
+                    </td>
+                    <td>{{item.color}}</td>
+                    <td>{{item.price}} $</td>
+                    <td>
+                        <span *ngIf="item.fluffy">{{item.fluffy}}</span>
+                        <span *ngIf="!item.fluffy"><i class="fas fa-times" style="font-size: 20px; padding: 10px 0"></i></span>
+                    </td>
+                    <td><button class="btn btn-danger" (click)="onDelete(item)">Delete</button></td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

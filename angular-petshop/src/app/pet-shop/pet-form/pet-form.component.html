@@ -1,0 +1,72 @@
+<form 
+    class="card-border mt-3"
+    [formGroup]='form'
+    >
+    <div class="form-group">
+        <label for="recipient-name" class="col-form-label">Add pet</label>
+        <select 
+            id="form-choose" 
+            class="form-control"
+            formControlName='type'
+            (change)='selectPet($event)'
+            (change)='validators($event)'
+        >
+            <option *ngFor="let pet of pets" [value]='pet'>{{pet}}</option>
+        </select>
+    </div>
+    <div 
+        class="form-setting"
+        *ngIf="selectedPet !== 'Choose'"
+    >
+        <div 
+            class="form-group" 
+            *ngIf="selectedPet !== 'Hamster'"
+        >
+            <label class="col-form-label">Name:</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                formControlName='name'
+            >
+        </div>
+        <div class="form-group">
+            <label class="col-form-label">Color:</label>
+            <input 
+                type="text" 
+                class="form-control"
+                formControlName='color'
+            >
+        </div>
+        <div class="form-group">
+            <label class="col-form-label">Price:</label>
+            <input
+                type="number" 
+                class="form-control"
+                formControlName='price'
+            >
+        </div>
+        <div 
+            class="form-group"
+            *ngIf="selectedPet !== 'Dog'"
+        >
+            <label for="customRange3">Fluffy</label>
+            <input 
+                type="range" 
+                class="custom-range" 
+                min="0" 
+                max="5" 
+                step="1" 
+                id="customRange3" 
+                [value]="0"
+                formControlName='fluffy'
+            >      
+        </div>
+    </div>   
+    <button 
+        type="submit" 
+        class="btn btn-primary"
+        [disabled]="form.invalid"
+        (click)='addNewPet()'
+    >Add
+    </button>
+</form>
